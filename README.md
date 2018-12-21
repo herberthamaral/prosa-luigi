@@ -4,7 +4,9 @@ Prosa do luigi
 
 O [luigi](https://luigi.readthedocs.io/en/stable/) é um pacote do Python que
 permite a criação e execução de pipelines (DAGs - grafos direcionados e
-acíclicos, em inglês), muito comum em tarefas de [ETL]() (extract,transform and load).
+acíclicos, em inglês), muito comum em tarefas de
+[ETL](https://pt.wikipedia.org/wiki/Extract,_transform,_load)
+(extract,transform and load).
 
 A apresentação está disponível no [Google Drive](https://docs.google.com/presentation/d/1Rf0illRDiw4Ls0XzxqBwwqerG7JbZQ7oLypcjlSjb-0/edit#slide=id.p).
 

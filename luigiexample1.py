@@ -47,6 +47,19 @@ class ConverteParaTexto(luigi.Task):
         return luigi.LocalTarget(f'/tmp/tjsp/parsed-{self.date.isoformat()}-{self.caderno}.txt')
 
 
+class ConverteTodosCadernos(luigi.WrapperTask):
+
+    date_start = luigi.DateParameter(default=datetime.date.today()-datetime.timedelta(7))
+    date_end = luigi.DateParameter(default=datetime.date.today())
+
+    def requires(self):
+        data_atual = self.date_start
+        while data_atual <= self.date_end:
+            for caderno in CADERNO_CHOICES:
+                yield ConverteParaTexto(caderno=caderno, date=data_atual)
+            data_atual += datetime.timedelta(1)
+
+
 if __name__ == '__main__':
     tasks = [
         ConverteParaTexto(caderno=caderno)

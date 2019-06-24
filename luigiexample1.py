@@ -61,8 +61,4 @@ class ConverteTodosCadernos(luigi.WrapperTask):
 
 
 if __name__ == '__main__':
-    tasks = [
-        ConverteParaTexto(caderno=caderno)
-        for caderno in CADERNO_CHOICES
-    ]
-    luigi.build(tasks, local_scheduler=True, workers=5)
+    luigi.run()

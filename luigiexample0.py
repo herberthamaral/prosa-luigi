@@ -27,8 +27,4 @@ class BaixaJornalTJSP(luigi.Task):
 
 
 if __name__ == '__main__':
-    tasks = [
-        BaixaJornalTJSP(caderno=caderno)
-        for caderno in CADERNO_CHOICES
-    ]
-    luigi.build(tasks, local_scheduler=True)
+    luigi.run()

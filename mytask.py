@@ -14,4 +14,4 @@ class MyTask(luigi.Task):
 
 
 if __name__ == '__main__':
-    luigi.build([MyTask()], local_scheduler=True)
+    luigi.run()

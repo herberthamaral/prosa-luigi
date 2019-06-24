@@ -110,4 +110,4 @@ class ProcessamentoWrapper(luigi.Task):
 
 
 if __name__ == '__main__':
-    luigi.build([ProcessamentoWrapper()], workers=5)  # agora usando o central-scheduler
+    luigi.run()

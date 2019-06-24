@@ -3,7 +3,7 @@ import luigi
 
 class MyTask(luigi.Task):
 
-    parameter = luigi.Parameter(default='xablau')
+    parameter = luigi.Parameter(default='empty')
 
     def run(self):
         with self.output().open('w') as output:
